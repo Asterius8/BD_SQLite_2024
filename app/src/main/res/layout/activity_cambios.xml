@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lbl_modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="78dp"
+        android:text="Modificar Alumno"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_intrucciones_cambios"
+        android:layout_width="363dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="44dp"
+        android:text="Seleccione de la siguiente tabla el registro que desea modificar."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_modificar" />
+
+    <EditText
+        android:id="@+id/caja_num_control_c"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Numero de control"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_intrucciones_cambios" />
+
+    <EditText
+        android:id="@+id/caja_nombre_c"
+        android:layout_width="330dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_num_control_c" />
+
+    <EditText
+        android:id="@+id/caja_edad_c"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_nombre_c" />
+
+    <Button
+        android:id="@+id/btn_modificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="140dp"
+        android:onClick="aceptarModificacion"
+        android:text="Modificar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caja_edad_c" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_alumnos"
+        android:layout_width="392dp"
+        android:layout_height="317dp"
+        android:layout_marginTop="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_modificar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
